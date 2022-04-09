@@ -1,0 +1,106 @@
+<header class="header">
+	<div class="header__upper-menu cluster justify-end">
+		<label for="darkModeSwitcher" class="dark-mode-btn">
+			<input type="checkbox" id="darkModeSwitcher" title="enable dark mode" />
+			<div class="moon-sun">
+				<div></div>
+				<div></div>
+				<span></span>
+			</div>
+		</label>
+	</div>
+	<section class="cover justify-center">
+		<div class="stack gap-xl">
+			<div class="header__photo stack center gap-2xl align-center">
+				<span class="decoration decoration-sm"></span>
+				<div class="frame circular--portrait md-picture">
+					<img
+						src="{{ .Site.BaseURL }}assets/pedro-photo.jpeg"
+						alt="Pedro La Rosa photo"
+					/>
+				</div>
+				<span class="decoration decoration-lg"></span>
+			</div>
+			<div class="cluster gap-md center">
+				{{ with .Site.Params.facebook }}
+				<a
+					data-hint="Facebook"
+					aria-label="Facebook"
+					href="{{ . }}"
+					rel="me"
+					class="button outlined button__round icon-size-md"
+					title="Personal Facebook community"
+				>
+					<i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+				</a>
+				{{ end }} {{ with .Site.Params.twitter }}
+				<a
+					data-hint="Twitter"
+					aria-label="Personal twitter"
+					href="{{ . }}"
+					rel="me"
+					class="button outlined button__round icon-size-md"
+					title="Personal twitter"
+				>
+					<i class="fa-brands fa-twitter"></i>
+				</a>
+
+				{{ end}} {{ with .Site.Params.instagram }}
+				<a
+					data-hint="Instagram"
+					aria-label="Personal instagram community"
+					href="{{ . }}"
+					rel="me"
+					class="button outlined button__round icon-size-md"
+					title="Personal instagram community"
+				>
+					<i class="fa-brands fa-instagram"></i>
+				</a>
+				{{ end }} {{ with .Site.Params.linkedin }}
+				<a
+					data-hint="Linkedin"
+					aria-label="Personal Linkedin community"
+					href="{{ . }}"
+					rel="me"
+					class="button outlined button__round icon-size-md"
+					title="Personal Linkedin community"
+				>
+					<i class="fa-brands fa-linkedin-in"></i>
+				</a>
+				{{ end}} {{ with .Site.Params.github }}
+				<a
+					data-hint="github"
+					aria-label="Personal github"
+					href="{{ . }}"
+					rel="me"
+					class="button outlined button__round icon-size-md"
+					title="Personal Github"
+				>
+					<i class="fa-brands fa-github-alt"></i>
+				</a>
+				{{ end}} {{ with .Site.Params.email }}
+				<a
+					data-hint="Email"
+					aria-label="Send an Email"
+					href="mailto:{{ . }}"
+					class="button outlined button__round icon-size-md"
+					title="Send an email"
+				>
+					<i class="fa-regular fa-envelope"></i>
+				</a>
+				{{ end }}
+			</div>
+			<section class="header__author stack gap-md">
+				<h1 class="h1 text-centered">{{ .Site.Title }}</h1>
+				<p class="p text-centered">{{ .Site.Params.description }}</p>
+			</section>
+		</div>
+		<a
+			href="#blog"
+			class="header__blog-cta stack button button-link gap-2xs bounce hidden-md"
+		>
+			<span class="h4">Go to Blog</span>
+			<i class="fa-solid fa-arrow-down"></i>
+		</a>
+	</section>
+</header>

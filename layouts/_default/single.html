@@ -1,0 +1,211 @@
+{{ define "main" }}
+
+<div class="container-post">
+	{{ partial "header.html" . }}
+
+	<main id="blog" class="stack padding-2xl gap-2xl">
+		<article class="stack gap-md">
+			<div class="stack post__title gap-lg center">
+				<div class="cluster gap-md center">
+					{{ $categories := .Params.categories }} {{range $index, $category :=
+					$categories }}
+
+					<a
+						href="/categories/{{ lower $category }}"
+						class="button button-link h4"
+						>{{ $category }}</a
+					>
+
+					{{ if not (eq (add $index 1) (len $categories)) }} &#8226; {{ end }}
+					{{ end }}
+				</div>
+
+				<div class="title-section stack gap-xs">
+					<h2 class="h1 text-centered">{{ .Title }}</h2>
+					<h3 class="h3 muted-fg-color text-centered">{{ .Params.subtitle}}</h3>
+				</div>
+				<section class="cluster gap-md justify-center">
+					<span class="cluster muted-fg gap-sm">
+						{{ if .Params.author }}
+						<div class="frame circular--portrait picture-2xs">
+							<img
+								src="{{ .Site.BaseURL }}assets/pedro-photo.jpeg"
+								alt="{{ .Params.author }} photo"
+							/>
+						</div>
+						<span>{{ .Params.author }}</span></span
+					>
+					{{ end }} {{ if .PublishDate }}
+					<span class="muted-fg gap-sm">
+						<i class="fa-regular fa-calendar fa-lg"></i>
+						{{ $dateTime := .PublishDate.Format "2006-01-02" }} {{ $dateFormat
+						:= .Site.Params.dateFormat | default "January 2, 2006" }}
+						<time class="muted-fg" datetime="{{ $dateTime }}"
+							>{{ .PublishDate.Format $dateFormat }}</time
+						>
+					</span>
+					{{ end }}
+				</section>
+			</div>
+
+			{{ with .Resources }} {{ with .GetMatch "{cover.*,*.jpg,*.png,*.jpeg}" }}
+			{{ $cover := .Resize "600x" }} {{ with $cover }}
+			<div class="frame square fluid-picture">
+				<img src="{{ .Permalink }}" alt="title of the photo" />
+			</div>
+			{{ end }} {{ end }} {{ end }}
+
+			<div class="stack gap-md">{{ .Content }}</div>
+		</article>
+		<section class="social-share stack gap-md">
+			<h3 class="h3">Share with your mates!</h3>
+			<nav class="cluster gap-sm">
+				<a
+					href="https://www.facebook.com/sharer/sharer.php?u=https:{{ .Permalink }}"
+					class="button button-link icon-size-md"
+					title="Share on facebook"
+					rel="noopener noreferrer"
+					target="_blank"
+				>
+					<i class="fa-brands fa-facebook-f"></i>
+				</a>
+				<a
+					href="https://twitter.com/share?url=https:{{ .Permalink }}"
+					class="button button-link icon-size-md"
+					title="Share on twitter"
+					rel="noopener noreferrer"
+					target="_blank"
+				>
+					<i class="fa-brands fa-twitter"></i>
+				</a>
+				<a
+					href="https://www.linkedin.com/sharing/share-offsite/?url=https:{{ .Permalink }}"
+					class="button button-link icon-size-md"
+					title="share on Linkedin"
+					rel="noopener noreferrer"
+					target="_blank"
+				>
+					<i class="fa-brands fa-linkedin-in"></i>
+				</a>
+				<a
+					href="https://t.me/share/url?url=https:{{ .Permalink }}&text={{ .Title }}
+"
+					class="button button-link icon-size-md"
+					title="share on telegram"
+					rel="noopener noreferrer"
+					target="_blank"
+				>
+					<i class="fa-brands fa-telegram"></i>
+				</a>
+				<a
+					href="whatsapp://send?text=https:{{ .Permalink }}"
+					class="button button-link icon-size-md"
+					title="share on whatsapp"
+					rel="noopener noreferrer"
+					target="_blank"
+				>
+					<i class="fa-brands fa-whatsapp"></i>
+				</a>
+				<button
+					class="button button-link icon-size-md copy-button"
+					title="Copy link"
+					type="button"
+				>
+					<i class="fa-regular fa-copy"></i>
+				</button>
+			</nav>
+		</section>
+		<section class="author-card stack gap-xl">
+			<div class="decoration fluid"></div>
+			<section class="cluster gap-2xl flex-nowrap">
+				<div class="frame circular--portrait">
+					<img
+						src="{{ .Site.BaseURL }}assets/pedro-photo.jpeg"
+						alt="{{ .Site.Title }} photo"
+					/>
+				</div>
+
+				<section class="header__author stack gap-md">
+					<h1 class="h2">{{ .Site.Title }}</h1>
+					<p class="p">{{ .Site.Params.description }}</p>
+				</section>
+			</section>
+			<div class="author-card__social">
+				<div
+					class="author-card__social__decorated-buttons decoration fluid"
+				></div>
+				<div class="author-card__social__buttons cluster gap-md">
+					{{ with .Site.Params.facebook }}
+					<a
+						data-hint="Facebook"
+						aria-label="Facebook"
+						href="{{ . }}"
+						rel="me"
+						class="button outlined button__round icon-size-md"
+						title="Personal Facebook community"
+					>
+						<i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+					</a>
+					{{ end }} {{ with .Site.Params.twitter }}
+					<a
+						data-hint="Twitter"
+						aria-label="Personal twitter"
+						href="{{ . }}"
+						rel="me"
+						class="button outlined button__round icon-size-md"
+						title="Personal twitter"
+					>
+						<i class="fa-brands fa-twitter"></i>
+					</a>
+
+					{{ end}} {{ with .Site.Params.instagram }}
+					<a
+						data-hint="Instagram"
+						aria-label="Personal instagram community"
+						href="{{ . }}"
+						rel="me"
+						class="button outlined button__round icon-size-md"
+						title="Personal instagram community"
+					>
+						<i class="fa-brands fa-instagram"></i>
+					</a>
+					{{ end }} {{ with .Site.Params.linkedin }}
+					<a
+						data-hint="Linkedin"
+						aria-label="Personal Linkedin community"
+						href="{{ . }}"
+						rel="me"
+						class="button outlined button__round icon-size-md"
+						title="Personal Linkedin community"
+					>
+						<i class="fa-brands fa-linkedin-in"></i>
+					</a>
+					{{ end}} {{ with .Site.Params.github }}
+					<a
+						data-hint="github"
+						aria-label="Personal github"
+						href="{{ . }}"
+						rel="me"
+						class="button outlined button__round icon-size-md"
+						title="Personal Github"
+					>
+						<i class="fa-brands fa-github-alt"></i>
+					</a>
+					{{ end}} {{ with .Site.Params.email }}
+					<a
+						data-hint="Email"
+						aria-label="Send an Email"
+						href="mailto:{{ . }}"
+						class="button outlined button__round icon-size-md"
+						title="Send an email"
+					>
+						<i class="fa-regular fa-envelope"></i>
+					</a>
+					{{ end }}
+				</div>
+			</div>
+		</section>
+	</main>
+</div>
+
+{{ end }}

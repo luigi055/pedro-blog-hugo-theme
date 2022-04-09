@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pedro La Rosa</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="stylesheet" href="css/not-found.css" />
+		<script
+			src="https://kit.fontawesome.com/9991dfd7e6.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body class="stack">
+		<div class="container-not-found-page stack">
+			<header class="header gap-xl">
+				<div class="cluster justify-space-between padding-2xl">
+					<div class="cluster gap-xl justify-center">
+						<a class="h3 button button-link" href="index.html">Home</a>
+						<a class="h3 button button-link" href=".">About</a>
+						<a class="h3 button button-link" href=".">Contact</a>
+					</div>
+					<label for="darkModeSwitcher" class="dark-mode-btn">
+						<input
+							type="checkbox"
+							id="darkModeSwitcher"
+							title="enable dark mode"
+						/>
+						<div class="moon-sun">
+							<div></div>
+							<div></div>
+							<span></span>
+						</div>
+					</label>
+				</div>
+			</header>
+
+			<main class="not-found-page stack padding-2xl gap-2xl">
+				<div class="error">404</div>
+				<br /><br />
+				<p class="info">Ooopsy... You shouldn't been seen this 😳</p>
+				<a
+					href="index.html"
+					class="link accented-link back-home"
+					title="redirect to home page"
+					>Go Back to main page</a
+				>
+			</main>
+		</div>
+		<footer class="margin-top-decoration">
+			<div class="footer container-post cluster gap-xl padding-2xl">
+				<p class="page-footer" class="h3">
+					<i class="fa-regular fa-copyright" title="Copyright"></i> 2022 Pedro
+					La Rosa
+				</p>
+				<div class="cluster gap-md">
+					<a
+						href="."
+						class="button button-link icon-size-md"
+						title="Personal Facebook community"
+					>
+						<i class="fa-brands fa-facebook-f"></i>
+					</a>
+					<a
+						href="."
+						class="button button-link icon-size-md"
+						title="Personal twitter community"
+					>
+						<i class="fa-brands fa-twitter"></i>
+					</a>
+					<a
+						href="."
+						class="button button-link icon-size-md"
+						title="Personal instagram community"
+					>
+						<i class="fa-brands fa-instagram"></i>
+					</a>
+					<a
+						href="."
+						class="button button-link icon-size-md"
+						title="Personal Linkedin community"
+					>
+						<i class="fa-brands fa-linkedin-in"></i>
+					</a>
+					<a
+						href="."
+						class="button button-link icon-size-md"
+						title="Personal Github"
+					>
+						<i class="fa-brands fa-github-alt"></i>
+					</a>
+				</div>
+			</div>
+		</footer>
+
+		<script src="js/dark-mode.js"></script>
+		<script src="js/top-bar.js"></script>
+		<script type="text/javascript">
+			(function () {
+				topbar.show();
+				window.addEventListener("DOMContentLoaded", () => {
+					topbar.hide();
+				});
+			})();
+		</script>
+		<script type="text/javascript">
+			(function () {
+				const currentURL = window.location.origin + window.location.pathname;
+				const copyButtons = document.getElementsByClassName("copy-button");
+
+				Array.prototype.forEach.call(copyButtons, function (copyButton, index) {
+					copyButton.addEventListener("click", async () => {
+						await navigator.clipboard.writeText(currentURL);
+					});
+				});
+			})();
+		</script>
+	</body>
+</html>

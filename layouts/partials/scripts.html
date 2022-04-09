@@ -1,0 +1,33 @@
+<script async src="{{ .Site.BaseURL }}js/dark-mode.js"></script>
+<script src="{{ .Site.BaseURL }}js/top-bar.js"></script>
+<script type="text/javascript">
+	(function () {
+		topbar.show();
+		window.addEventListener("DOMContentLoaded", () => {
+			topbar.hide();
+		});
+	})();
+</script>
+<!-- <script async type="text/javascript">
+	const isoTimeTextNode = document.querySelectorAll(".to-local-time-format");
+	isoTimeTextNode.forEach((el) => {
+		const options = {
+			year: "numeric",
+			month: "long",
+			day: "numeric",
+		};
+		const formatDate = new Date(el.textContent).toLocaleDateString(
+			"en-US",
+			options
+		);
+
+		el.textContent = formatDate;
+	});
+</script> -->
+<script type="text/javascript">
+	const preElementInHighLight = document.querySelectorAll(".highlight > pre");
+
+	preElementInHighLight.forEach((el) => {
+		el.style.padding = "1rem";
+	});
+</script>

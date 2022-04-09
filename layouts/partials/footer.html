@@ -1,0 +1,78 @@
+<footer class="margin-top-decoration">
+	<div class="footer container cluster gap-xl padding-2xl">
+		<p class="page-footer" class="h3">
+			<i class="fa-regular fa-copyright" title="Copyright"></i> {{ now.Format
+			"2006"}} {{ .Site.Title }}
+		</p>
+		<div class="cluster gap-md">
+			{{ with .Site.Params.facebook }}
+
+			<a
+				data-hint="Facebook"
+				aria-label="Facebook"
+				href="{{ . }}"
+				rel="me"
+				class="button button-link icon-size-md"
+				title="Personal Facebook community"
+			>
+				<i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+			</a>
+			{{ end }} {{ with .Site.Params.twitter }}
+			<a
+				data-hint="Twitter"
+				aria-label="Personal twitter"
+				href="{{ . }}"
+				rel="me"
+				class="button button-link icon-size-md"
+				title="Personal twitter"
+			>
+				<i class="fa-brands fa-twitter"></i>
+			</a>
+
+			{{ end}} {{ with .Site.Params.instagram }}
+			<a
+				data-hint="Instagram"
+				aria-label="Personal instagram community"
+				href="{{ . }}"
+				rel="me"
+				class="button button-link icon-size-md"
+				title="Personal instagram community"
+			>
+				<i class="fa-brands fa-instagram"></i>
+			</a>
+			{{ end }} {{ with .Site.Params.linkedin }}
+			<a
+				data-hint="Linkedin"
+				aria-label="Personal Linkedin community"
+				href="{{ . }}"
+				rel="me"
+				class="button button-link icon-size-md"
+				title="Personal Linkedin community"
+			>
+				<i class="fa-brands fa-linkedin-in"></i>
+			</a>
+			{{ end}} {{ with .Site.Params.github }}
+			<a
+				data-hint="github"
+				aria-label="Personal github "
+				href="{{ . }}"
+				rel="me"
+				class="button button-link icon-size-md"
+				title="Personal Github"
+			>
+				<i class="fa-brands fa-github-alt"></i>
+			</a>
+			{{ end}} {{ with .Site.Params.email }}
+			<a
+				data-hint="Email"
+				aria-label="Send an Email"
+				href="mailto:{{ . }}"
+				class="button button-link icon-size-md"
+				title="Send an email"
+			>
+				<i class="fa-regular fa-envelope"></i>
+			</a>
+			{{ end }}
+		</div>
+	</div>
+</footer>

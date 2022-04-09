@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pedro La Rosa</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<script
+			src="https://kit.fontawesome.com/9991dfd7e6.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<div class="container-post">
+			<header class="header gap-xl">
+				<div class="cluster justify-space-between padding-2xl">
+					<div class="cluster gap-xl justify-center">
+						<a class="h3 button button-link" href="index.html">Home</a>
+						<a class="h3 button button-link" href=".">About</a>
+						<a class="h3 button button-link" href=".">Contact</a>
+					</div>
+					<label for="darkModeSwitcher" class="dark-mode-btn">
+						<input
+							type="checkbox"
+							id="darkModeSwitcher"
+							title="enable dark mode"
+						/>
+						<div class="moon-sun">
+							<div></div>
+							<div></div>
+							<span></span>
+						</div>
+					</label>
+				</div>
+			</header>
+
+			<main id="blog" class="stack padding-2xl gap-2xl">
+				<article class="stack gap-md">
+					<!-- <div class="frame square fluid-picture">
+						<img
+							src="http://placekitten.com/200/300"
+							alt="title of the photo"
+						/>
+					</div> -->
+
+					<div class="stack post__title gap-lg center">
+						<div class="cluster gap-md center">
+							<a href="." class="button button-link h5">HTML</a>
+							&#8226;
+							<a href="." class="button button-link h5">CSS</a>
+						</div>
+
+						<div class="title-section stack gap-xs">
+							<h2 class="h1 text-centered">
+								Lore ipsum dolor sit amet consectetur adipisicing elit.
+							</h2>
+							<h3 class="h3 muted-fg-color text-centered">
+								beatae natus exercitationem cum quaerat veniam sit
+							</h3>
+						</div>
+						<section class="cluster gap-md justify-center">
+							<a href="." class="button button-link__muted gap-sm">
+								<div class="frame circular--portrait picture-2xs">
+									<img
+										src="./assets/pedro-photo.jpeg"
+										alt="Pedro La Rosa photo"
+									/>
+								</div>
+								<span>Pedro La Rosa</span></a
+							>
+							<a href="." class="button button-link__muted gap-sm">
+								<i class="fa-regular fa-calendar fa-lg"></i>
+								<span>March 15, 2022</span></a
+							>
+						</section>
+					</div>
+
+					<div class="stack gap-md">
+						<p class="p">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+							beatae natus exercitationem cum quaerat veniam sit ad praesentium
+							odio, esse delectus adipisci in earum, dicta pariatur id dolorem
+							reprehenderit blanditiis.
+						</p>
+						<p class="p">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Voluptatum voluptate quibusdam suscipit libero nam necessitatibus
+							deserunt itaque provident, est debitis nemo quia praesentium sit
+							ad ratione! Vel quo laboriosam magni!
+						</p>
+						<p class="p">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Voluptatum voluptate quibusdam suscipit libero nam necessitatibus
+							deserunt itaque provident, est debitis nemo quia praesentium sit
+							ad ratione! Vel quo laboriosam magni!
+						</p>
+						<p class="p">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Voluptatum voluptate quibusdam suscipit libero nam necessitatibus
+							deserunt itaque provident, est debitis nemo quia praesentium sit
+							ad ratione! Vel quo laboriosam magni!
+						</p>
+					</div>
+				</article>
+				<section class="social-share stack gap-md">
+					<h3 class="h3">Share with your mates!</h3>
+					<nav class="cluster gap-sm">
+						<a
+							href="https://www.facebook.com/sharer/sharer.php?u="
+							class="button button-link icon-size-md"
+							title="Share on facebook"
+							rel="noopener noreferrer"
+							target="_blank"
+						>
+							<i class="fa-brands fa-facebook-f"></i>
+						</a>
+						<a
+							href="https://twitter.com/share?url="
+							class="button button-link icon-size-md"
+							title="Share on twitter"
+							rel="noopener noreferrer"
+							target="_blank"
+						>
+							<i class="fa-brands fa-twitter"></i>
+						</a>
+						<a
+							href="https://www.linkedin.com/sharing/share-offsite/?url={url}"
+							class="button button-link icon-size-md"
+							title="share on Linkedin"
+							rel="noopener noreferrer"
+							target="_blank"
+						>
+							<i class="fa-brands fa-linkedin-in"></i>
+						</a>
+						<a
+							href="https://t.me/share/url?url={url}&text={text}
+"
+							class="button button-link icon-size-md"
+							title="share on telegram"
+							rel="noopener noreferrer"
+							target="_blank"
+						>
+							<i class="fa-brands fa-telegram"></i>
+						</a>
+						<a
+							href="whatsapp://send?text="
+							class="button button-link icon-size-md"
+							title="share on whatsapp"
+							rel="noopener noreferrer"
+							target="_blank"
+						>
+							<i class="fa-brands fa-whatsapp"></i>
+						</a>
+						<button
+							class="button button-link icon-size-md copy-button"
+							title="Copy link"
+							type="button"
+						>
+							<i class="fa-regular fa-copy"></i>
+						</button>
+					</nav>
+				</section>
+				<section class="author-card stack gap-xl">
+					<div class="decoration fluid"></div>
+					<section class="cluster gap-2xl flex-nowrap">
+						<div class="frame circular--portrait">
+							<img src="./assets/pedro-photo.jpeg" alt="Pedro La Rosa photo" />
+						</div>
+
+						<section class="header__author stack gap-md">
+							<h2 class="h2">Pedro La Rosa</h2>
+							<p class="p">
+								Hi! I’m a Front End Engineer with passion for Technology, Coding
+								and Start ups. I Love Javascript and like to experiment and do
+								good stuff with it
+							</p>
+						</section>
+					</section>
+					<div class="author-card__social">
+						<div
+							class="author-card__social__decorated-buttons decoration fluid"
+						></div>
+						<div class="author-card__social__buttons cluster gap-md">
+							<a
+								href="."
+								class="button outlined button__round icon-size-md"
+								title="Personal Facebook community"
+							>
+								<i class="fa-brands fa-facebook-f"></i>
+							</a>
+							<a
+								href="."
+								class="button outlined button__round icon-size-md"
+								title="Personal twitter community"
+							>
+								<i class="fa-brands fa-twitter"></i>
+							</a>
+							<a
+								href="."
+								class="button outlined button__round icon-size-md"
+								title="Personal instagram community"
+							>
+								<i class="fa-brands fa-instagram"></i>
+							</a>
+							<a
+								href="."
+								class="button outlined button__round icon-size-md"
+								title="Personal Linkedin community"
+							>
+								<i class="fa-brands fa-linkedin-in"></i>
+							</a>
+							<a
+								href="."
+								class="button outlined button__round icon-size-md"
+								title="Personal Github"
+							>
+								<i class="fa-brands fa-github-alt"></i>
+							</a>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+		<footer class="margin-top-decoration">
+			<div class="footer container-post cluster gap-xl padding-2xl">
+				<p class="page-footer" class="h3">
+					<i class="fa-regular fa-copyright" title="Copyright"></i> 2022 Pedro
+					La Rosa
+				</p>
+				<div class="cluster gap-md">
+					<a
+						href="."
+						class="button button-link icon-size-md"
+						title="Personal Facebook community"
+					>
+						<i class="fa-brands fa-facebook-f"></i>
+					</a>
+					<a
+						href="."
+						class="button button-link icon-size-md"
+						title="Personal twitter community"
+					>
+						<i class="fa-brands fa-twitter"></i>
+					</a>
+					<a
+						href="."
+						class="button button-link icon-size-md"
+						title="Personal instagram community"
+					>
+						<i class="fa-brands fa-instagram"></i>
+					</a>
+					<a
+						href="."
+						class="button button-link icon-size-md"
+						title="Personal Linkedin community"
+					>
+						<i class="fa-brands fa-linkedin-in"></i>
+					</a>
+					<a
+						href="."
+						class="button button-link icon-size-md"
+						title="Personal Github"
+					>
+						<i class="fa-brands fa-github-alt"></i>
+					</a>
+				</div>
+			</div>
+		</footer>
+
+		<script src="js/dark-mode.js"></script>
+		<script src="js/top-bar.js"></script>
+		<script type="text/javascript">
+			(function () {
+				topbar.show();
+				window.addEventListener("DOMContentLoaded", () => {
+					topbar.hide();
+				});
+			})();
+		</script>
+		<script type="text/javascript">
+			(function () {
+				const currentURL = window.location.origin + window.location.pathname;
+				const copyButtons = document.getElementsByClassName("copy-button");
+
+				Array.prototype.forEach.call(copyButtons, function (copyButton, index) {
+					copyButton.addEventListener("click", async () => {
+						await navigator.clipboard.writeText(currentURL);
+					});
+				});
+			})();
+		</script>
+	</body>
+</html>

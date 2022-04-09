@@ -1,0 +1,17 @@
+{{ $pag := $.Paginator }} {{ if gt $pag.TotalPages 1 }}
+		<nav class="pagination cluster justify-space-between padding-y-lg" role="navigation">
+			{{ if $pag.HasPrev }}
+			<a class="button button-link h4" href="{{ $pag.Prev.URL }}#blog"
+				><i class="fa-solid fa-arrow-left"></i> &nbsp; Newer Posts</a
+			>
+			{{ else }}
+			<span></span>
+			{{ end }}
+
+			{{ if $pag.HasNext }}
+		<a class="button button-link h4" href="{{ $pag.Next.URL }}#blog"
+				>Older Posts &nbsp; <i class="fa-solid fa-arrow-right"></i></i
+			></a>
+			{{ end }}
+		</nav>
+		{{ end }}

@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+<div class="container-not-found-page stack">
+	{{ partial "header.html" . }}
+
+	<main class="not-found-page stack padding-2xl gap-2xl">
+		<div class="error">404</div>
+		<br /><br />
+		<p class="info">Ooopsy... You shouldn't been seen this 😳</p>
+		<a
+			href="{{ .Site.BaseURL }}"
+			class="link accented-link back-home"
+			title="redirect to home page"
+			>Go Back to main page</a
+		>
+	</main>
+</div>
+
+{{ end }}

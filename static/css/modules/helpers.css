@@ -1,0 +1,258 @@
+.accented-fg-color {
+	color: var(--accent-color);
+}
+.muted-fg-color {
+	color: var(--muted-grey-color);
+}
+.flex-nowrap {
+	flex-wrap: nowrap;
+}
+.margin-bottom-decoration--accented {
+	border-bottom: 1px solid var(--accent-color);
+}
+.margin-bottom-decoration {
+	border-bottom: 1px solid var(--light-grey-color);
+}
+.margin-top-decoration {
+	border-top: 1px solid var(--light-grey-color);
+}
+.justify-start {
+	justify-content: flex-start;
+}
+.justify-end {
+	justify-content: flex-end;
+}
+.justify-center {
+	justify-content: center;
+}
+.justify-space-between {
+	justify-content: space-between;
+}
+.justify-space-around {
+	justify-content: space-between;
+}
+.justify-self-start {
+	justify-self: flex-start;
+}
+.justify-self-end {
+	justify-self: flex-end;
+}
+.justify-self-center {
+	justify-self: center;
+}
+.justify-self-space-between {
+	justify-self: space-between;
+}
+.justify-self-space-around {
+	justify-self: space-between;
+}
+.align-start {
+	align-items: flex-start;
+}
+.align-end {
+	align-items: flex-end;
+}
+.align-center {
+	align-items: center;
+}
+.align-space-between {
+	align-items: space-between;
+}
+.align-space-around {
+	align-items: space-between;
+}
+.align-self-start {
+	align-self: flex-start;
+}
+.align-self-end {
+	align-self: flex-end;
+}
+.align-self-center {
+	align-self: center;
+}
+.align-self-space-between {
+	align-self: space-between;
+}
+.align-self-space-around {
+	align-self: space-between;
+}
+.gap-none {
+	gap: var(--size-none);
+}
+.gap-2xs {
+	gap: var(--size-2xs);
+}
+.gap-xs {
+	gap: var(--size-xs);
+}
+.gap-sm {
+	gap: var(--size-sm);
+}
+.gap-md {
+	gap: var(--size-md);
+}
+.gap-lg {
+	gap: var(--size-lg);
+}
+.gap-xl {
+	gap: var(--size-xl);
+}
+.gap-2xl {
+	gap: var(--size-2xl);
+}
+.gap-xxxl {
+	gap: var(--size-xxxl);
+}
+.gap-macro {
+	gap: var(--size-macro);
+}
+
+.padding-none {
+	padding: var(--size-none);
+}
+.padding-2xs {
+	padding: var(--size-2xs);
+}
+.padding-xs {
+	padding: var(--size-xs);
+}
+.padding-sm {
+	padding: var(--size-sm);
+}
+.padding-md {
+	padding: var(--size-md);
+}
+.padding-lg {
+	padding: var(--size-lg);
+}
+.padding-xl {
+	padding: var(--size-xl);
+}
+.padding-2xl {
+	padding: var(--size-2xl);
+}
+.padding-macro {
+	padding: var(--size-macro);
+}
+.padding-x-none {
+	padding-left: var(--size-none);
+	padding-right: var(--size-none);
+}
+.padding-x-2xs {
+	padding-left: var(--size-2xs);
+	padding-right: var(--size-2xs);
+}
+.padding-x-xs {
+	padding-left: var(--size-xs);
+	padding-right: var(--size-xs);
+}
+.padding-x-sm {
+	padding-left: var(--size-sm);
+	padding-right: var(--size-sm);
+}
+.padding-x-md {
+	padding-left: var(--size-md);
+	padding-right: var(--size-md);
+}
+.padding-x-lg {
+	padding-left: var(--size-lg);
+	padding-right: var(--size-lg);
+}
+.padding-x-xl {
+	padding-left: var(--size-xl);
+	padding-right: var(--size-xl);
+}
+.padding-x-2xl {
+	padding-left: var(--size-2xl);
+	padding-right: var(--size-2xl);
+}
+.padding-x-macro {
+	padding-left: var(--size-macro);
+	padding-right: var(--size-macro);
+}
+.padding-y-none {
+	padding-top: var(--size-none);
+	padding-bottom: var(--size-none);
+}
+.padding-y-2xs {
+	padding-top: var(--size-2xs);
+	padding-bottom: var(--size-2xs);
+}
+.padding-y-xs {
+	padding-top: var(--size-xs);
+	padding-bottom: var(--size-xs);
+}
+.padding-y-sm {
+	padding-top: var(--size-sm);
+	padding-bottom: var(--size-sm);
+}
+.padding-y-md {
+	padding-top: var(--size-md);
+	padding-bottom: var(--size-md);
+}
+.padding-y-lg {
+	padding-top: var(--size-lg);
+	padding-bottom: var(--size-lg);
+}
+.padding-y-xl {
+	padding-top: var(--size-xl);
+	padding-bottom: var(--size-xl);
+}
+.padding-y-2xl {
+	padding-top: var(--size-2xl);
+	padding-bottom: var(--size-2xl);
+}
+.padding-y-macro {
+	padding-top: var(--size-macro);
+	padding-bottom: var(--size-macro);
+}
+.full-width {
+	width: 100%;
+}
+.full-height {
+	height: 100%;
+}
+
+/* SCREENS FROM 476px/16px (29.75rem) OR EQUIVALENT*/
+@media screen and (min-width: 29.75rem) {
+	.hidden-sm {
+		display: none;
+	}
+
+	.show-sm {
+		display: flex;
+	}
+}
+
+/* SCREENS FROM 768px/16px (40rem) OR EQUIVALENT*/
+@media screen and (min-width: 48rem) {
+	.hidden-md {
+		display: none;
+	}
+
+	.show-md {
+		display: flex;
+	}
+}
+
+/* SCREENS FROM 1200px/16px (75rem) OR EQUIVALENT*/
+@media screen and (min-width: 75rem) {
+	.hidden-lg {
+		display: none;
+	}
+
+	.show-lg {
+		display: flex;
+	}
+}
+
+/* SCREENS FROM 2000px/16px (125rem) OR EQUIVALENT*/
+@media screen and (min-width: 125rem) {
+	.hidden-xl {
+		display: none;
+	}
+
+	.show-xl {
+		display: flex;
+	}
+}

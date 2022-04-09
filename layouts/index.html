@@ -1,0 +1,77 @@
+{{ define "main" }}
+
+<div class="main-sidebar with-sidebar container" id="top">
+	<div>{{ partial "home-header.html" . }}</div>
+	<main id="blog" class="main-section stack padding-2xl gap-2xl">
+		<div class="cluster gap-xl justify-center">
+			{{ partial "nav-items.html" .}}
+		</div>
+
+		<div class="stack gap-2xl">
+			<h2 class="h2 accented-fg-color text-centered">Latest Posts</h2>
+			<div
+				class="stack gap-2xl justify-center"
+				itemscope=""
+				itemtype="https://schema.org/Blog"
+			>
+				{{ $pag := .Paginate (where .Site.RegularPages "Type" "in"
+				.Site.Params.mainSections) }} {{ range $pag.Pages.ByDate.Reverse }}
+
+				<article class="stack posts__card gap-xl">
+					{{ with .Resources }} {{ with .GetMatch "{cover.*,*.jpg,*.png,*.jpeg}"
+					}} {{ $cover := .Resize "600x" }} {{ with $cover }}
+					<div class="frame square fluid-picture">
+						<img src="{{ .Permalink }}" alt="title of the photo" />
+					</div>
+					{{ end }} {{ end }} {{ end }}
+
+					<div class="stack gap-sm posts__card__content">
+						<div class="title-section stack gap-2xs">
+							<h3>
+								<a class="h2 link post-link__title" href="{{ .RelPermalink }}"
+									>{{ .Title }}
+								</a>
+								<h4 class="h4 muted-fg-color">{{ .Params.subtitle}}</h4>
+							</h3>
+						</div>
+
+						<div class="cluster gap-sm">
+							{{ $categories := .Params.categories }} {{range $index, $category
+							:= $categories }}
+
+							<a
+								href="/categories/{{ lower $category }}"
+								class="button button-link h5"
+								>{{ $category }}</a
+							>
+
+							{{ if not (eq (add $index 1) (len $categories)) }} &#8226; {{ end
+							}} {{ end }}
+						</div>
+						<p class="p">{{ .Summary }}</p>
+						<a
+							href="{{ .RelPermalink }}"
+							class="button button-link post-link__read-more"
+							>Read More</a
+						>
+					</div>
+					<footer
+						class="post__card__footer cluster margin-top-decoration gap-lg"
+					>
+						<span class="muted-fg">by {{ .Params.author }}</span>
+
+						{{ $dateTime := .PublishDate.Format "2006-01-02" }} {{ $dateFormat
+						:= .Site.Params.dateFormat | default "January 2, 2006" }}
+						<time class="muted-fg" datetime="{{ $dateTime }}"
+							>{{ .PublishDate.Format $dateFormat }}</time
+						>
+					</footer>
+				</article>
+
+				{{ end }}
+			</div>
+		</div>
+		{{ partial "pagination.html" .}}
+	</main>
+</div>
+{{ end }}

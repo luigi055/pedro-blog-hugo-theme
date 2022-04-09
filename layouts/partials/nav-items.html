@@ -1,0 +1,4 @@
+<a class="h3 button button-link" href="{{ .Site.BaseURL }}">Home</a>
+{{ range $i, $e := (where .Site.RegularPages "Section" "pages") }}
+<a class="h3 button button-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+{{ end }}
