@@ -3,7 +3,7 @@
 
 name = "Pedroblogtheme"
 license = "MIT"
-licenselink = "https://github.com/luigi055/blog"
+licenselink = "https://github.com/luigi055/pedro-blog-hugo-theme.git"
 description = "Personal minimalist Blog thought to be responsive and be read for all screen wides"
 homepage = "pedrolarosa.com"
 tags = ["blog", "technical", "personal"]
