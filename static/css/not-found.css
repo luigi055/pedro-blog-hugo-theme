@@ -1,11 +1,3 @@
-.not-found-root {
-	background: radial-gradient(#f00, var(--accent-color));
-	color: var(--fg-color);
-	overflow: hidden;
-	height: 100%;
-	user-select: none;
-}
-
 .static {
 	width: 100%;
 	height: 100%;

@@ -1,5 +1,7 @@
 <footer class="margin-top-decoration">
-	<div class="footer container cluster gap-xl padding-2xl">
+	<div
+		class="footer {{ if .IsHome }}container {{ else }} container-post {{ end }}cluster gap-xl padding-2xl"
+	>
 		<p class="page-footer" class="h3">
 			<i class="fa-regular fa-copyright" title="Copyright"></i> {{ now.Format
 			"2006"}} {{ .Site.Title }}
