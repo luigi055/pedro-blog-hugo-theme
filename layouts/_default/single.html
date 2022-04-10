@@ -61,8 +61,8 @@
 			<h3 class="h3">Share with your mates!</h3>
 			<nav class="cluster gap-sm">
 				<a
-					href="https://www.facebook.com/sharer/sharer.php?u=https:{{ substr .Site.BaseURL 0 -1 }}{{ .RelPermalink }}"
-					class="button button-link icon-size-md"
+					href="https://www.facebook.com/sharer/sharer.php?u="
+					class="share-link button button-link icon-size-md"
 					title="Share on facebook"
 					rel="noopener noreferrer"
 					target="_blank"
@@ -70,8 +70,8 @@
 					<i class="fa-brands fa-facebook-f"></i>
 				</a>
 				<a
-					href="https://twitter.com/share?url=https:{{ substr .Site.BaseURL 0 -1 }}{{ .RelPermalink }}"
-					class="button button-link icon-size-md"
+					href="https://twitter.com/share?url="
+					class="share-link button button-link icon-size-md"
 					title="Share on twitter"
 					rel="noopener noreferrer"
 					target="_blank"
@@ -79,8 +79,8 @@
 					<i class="fa-brands fa-twitter"></i>
 				</a>
 				<a
-					href="https://www.linkedin.com/sharing/share-offsite/?url=https:{{ substr .Site.BaseURL 0 -1 }}{{ .RelPermalink }}"
-					class="button button-link icon-size-md"
+					href="https://www.linkedin.com/sharing/share-offsite/?url="
+					class="share-link button button-link icon-size-md"
 					title="share on Linkedin"
 					rel="noopener noreferrer"
 					target="_blank"
@@ -88,9 +88,8 @@
 					<i class="fa-brands fa-linkedin-in"></i>
 				</a>
 				<a
-					href="https://t.me/share/url?url=https:{{ substr .Site.BaseURL 0 -1 }}{{ .RelPermalink }}&text={{ .Title }}
-"
-					class="button button-link icon-size-md"
+					href="https://t.me/share/url?text={{ .Title }}&url="
+					class="share-link button button-link icon-size-md"
 					title="share on telegram"
 					rel="noopener noreferrer"
 					target="_blank"
@@ -98,8 +97,8 @@
 					<i class="fa-brands fa-telegram"></i>
 				</a>
 				<a
-					href="whatsapp://send?text=https:{{ substr .Site.BaseURL 0 -1 }}{{ .RelPermalink }}"
-					class="button button-link icon-size-md"
+					href="whatsapp://send?text="
+					class="share-link button button-link icon-size-md"
 					title="share on whatsapp"
 					rel="noopener noreferrer"
 					target="_blank"

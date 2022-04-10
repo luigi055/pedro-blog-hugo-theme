@@ -16,15 +16,21 @@
 		el.style.padding = "1rem";
 	});
 </script>
-<script async type="text/javascript">
-	(function () {
+<script type="text/javascript">
+	(function shareButtons() {
 		const currentURL = window.location.origin + window.location.pathname;
 		const copyButtons = document.getElementsByClassName("copy-button");
+		const shareButtonLinks = document.querySelectorAll("a.share-link");
 
 		Array.prototype.forEach.call(copyButtons, function (copyButton, index) {
 			copyButton.addEventListener("click", async () => {
 				await navigator.clipboard.writeText(currentURL);
 			});
+		});
+
+		shareButtonLinks.forEach((el) => {
+			console.log(el);
+			el.href += currentURL;
 		});
 	})();
 </script>
