@@ -8,7 +8,11 @@
 		</div>
 
 		<div class="stack gap-2xl">
-			<h2 class="h2 accented-fg-color text-centered">Latest Posts</h2>
+			{{ if .Site.Params.headline }}
+			<h2 class="h2 accented-fg-color text-centered">
+				{{ .Site.Params.headline }}
+			</h2>
+			{{ end }}
 			<div
 				class="stack gap-2xl justify-center"
 				itemscope=""

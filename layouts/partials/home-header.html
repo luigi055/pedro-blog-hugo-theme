@@ -12,14 +12,13 @@
 	<section class="cover justify-center">
 		<div class="stack gap-xl">
 			<div class="header__photo stack center gap-2xl align-center">
+				{{ if .Site.Params.blogPhoto }}
 				<span class="decoration decoration-sm"></span>
 				<div class="frame circular--portrait md-picture">
-					<img
-						src="{{ .Site.BaseURL }}assets/pedro-photo.jpeg"
-						alt="Pedro La Rosa photo"
-					/>
+					<img src="{{ .Site.Params.blogPhoto }}" alt="{{ .Site.Title }}" />
 				</div>
 				<span class="decoration decoration-lg"></span>
+				{{ end }}
 			</div>
 			<div class="cluster gap-md center">
 				{{ with .Site.Params.facebook }}
