@@ -61,7 +61,7 @@
 			<h3 class="h3">Share with your mates!</h3>
 			<nav class="cluster gap-sm">
 				<a
-					href="https://www.facebook.com/sharer/sharer.php?u=https:{{ .Permalink }}"
+					href="https://www.facebook.com/sharer/sharer.php?u=https:{{ substr .Site.BaseURL 0 -1 }}{{ .RelPermalink }}"
 					class="button button-link icon-size-md"
 					title="Share on facebook"
 					rel="noopener noreferrer"
@@ -70,7 +70,7 @@
 					<i class="fa-brands fa-facebook-f"></i>
 				</a>
 				<a
-					href="https://twitter.com/share?url=https:{{ .Permalink }}"
+					href="https://twitter.com/share?url=https:{{ substr .Site.BaseURL 0 -1 }}{{ .RelPermalink }}"
 					class="button button-link icon-size-md"
 					title="Share on twitter"
 					rel="noopener noreferrer"
@@ -79,7 +79,7 @@
 					<i class="fa-brands fa-twitter"></i>
 				</a>
 				<a
-					href="https://www.linkedin.com/sharing/share-offsite/?url=https:{{ .Permalink }}"
+					href="https://www.linkedin.com/sharing/share-offsite/?url=https:{{ substr .Site.BaseURL 0 -1 }}{{ .RelPermalink }}"
 					class="button button-link icon-size-md"
 					title="share on Linkedin"
 					rel="noopener noreferrer"
@@ -88,7 +88,7 @@
 					<i class="fa-brands fa-linkedin-in"></i>
 				</a>
 				<a
-					href="https://t.me/share/url?url=https:{{ .Permalink }}&text={{ .Title }}
+					href="https://t.me/share/url?url=https:{{ substr .Site.BaseURL 0 -1 }}{{ .RelPermalink }}&text={{ .Title }}
 "
 					class="button button-link icon-size-md"
 					title="share on telegram"
@@ -98,7 +98,7 @@
 					<i class="fa-brands fa-telegram"></i>
 				</a>
 				<a
-					href="whatsapp://send?text=https:{{ .Permalink }}"
+					href="whatsapp://send?text=https:{{ substr .Site.BaseURL 0 -1 }}{{ .RelPermalink }}"
 					class="button button-link icon-size-md"
 					title="share on whatsapp"
 					rel="noopener noreferrer"
