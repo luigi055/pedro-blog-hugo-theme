@@ -20,8 +20,8 @@
 			{{ $categories := .Params.categories }} {{range $index, $category :=
 			$categories }}
 
-			<a href="/categories/{{ lower $category }}" class="button button-link h4"
-				>{{ $category }}</a
+			<a href="/categories/{{ . | urlize}}" class="button button-link h4"
+				>{{ . }}</a
 			>
 
 			{{ if not (eq (add $index 1) (len $categories)) }} &#8226; {{ end }} {{
