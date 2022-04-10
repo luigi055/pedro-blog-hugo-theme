@@ -4,9 +4,6 @@
 .muted-fg-color {
 	color: var(--muted-grey-color);
 }
-.flex-nowrap {
-	flex-wrap: nowrap;
-}
 .margin-bottom-decoration--accented {
 	border-bottom: 1px solid var(--accent-color);
 }
@@ -15,6 +12,29 @@
 }
 .margin-top-decoration {
 	border-top: 1px solid var(--light-grey-color);
+}
+
+.card {
+	border-radius: 5px;
+}
+
+.card.card-border {
+	border: 1px solid var(--muted-grey-color);
+}
+.card.card-border:hover {
+	border: 1px solid var(--accent-color);
+}
+
+.flex-grow-max-relevance {
+	flex-grow: 100;
+}
+
+.flex-grow-low-relevance {
+	flex-grow: 1;
+}
+
+.flex-nowrap {
+	flex-wrap: nowrap;
 }
 .justify-start {
 	justify-content: flex-start;

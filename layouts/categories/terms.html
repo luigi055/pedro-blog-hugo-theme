@@ -1,0 +1,27 @@
+{{ define "main" }}
+
+<div class="container-post flex-grow-max-relevance">
+	{{ partial "header.html" . }}
+
+	<main id="blog" class="stack padding-2xl gap-macro">
+		<h2 class="h1 text-centered">{{ .Title }}</h2>
+		{{ .Content }}
+		<section class="grid grid-categories gap-2xl">
+			{{ range .Data.Terms.ByCount }}
+			<a
+				class="link card card-border padding-xl"
+				style="display: block"
+				href="{{ .Page.Permalink }}"
+			>
+				<article class="stack gap-sm text-centered">
+					<h3>{{ .Page.Title }}</h3>
+					{{ $pageCount := len .Pages }}
+					<p>{{ $pageCount }} post{{ if ne $pageCount 1 }}s{{ end }}</p>
+				</article>
+			</a>
+			{{ end }}
+		</section>
+	</main>
+</div>
+
+{{ end }}

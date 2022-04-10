@@ -31,7 +31,7 @@
 	--square-sm: 1.4rem;
 	--square-md: 1.8rem;
 
-	--blog-card-max-width: 18rem;
+	--blog-card-max-width: 12rem;
 
 	--dark-mode-switcher-bg: var(--accent-color);
 	--dark-mode-switcher-border-color: var(--background);

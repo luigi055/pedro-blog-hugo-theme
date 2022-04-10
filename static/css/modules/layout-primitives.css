@@ -4,14 +4,6 @@
 	grid-template-columns: repeat(auto-fit, 100%, 1fr);
 }
 
-.grid.grid-posts {
-	grid-template-columns: repeat(
-		auto-fit,
-		minmax(min(var(--blog-card-max-width), 100%), 1fr)
-	);
-	grid-auto-rows: 0.5fr;
-}
-
 .center {
 	box-sizing: content-box;
 	margin-inline: auto;

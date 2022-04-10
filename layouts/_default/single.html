@@ -46,6 +46,12 @@
 					</span>
 					{{ end }}
 				</section>
+				{{ if not .Params.shouldHideReadTime }}
+				<span class="cluster muted-fg gap-sm justify-center">
+					<i class="fa-regular fa-clock"></i>
+					<span>{{ .ReadingTime }} Minutes read</span></span
+				>
+				{{ end }}
 			</div>
 
 			{{ with .Resources }} {{ with .GetMatch "{cover.*,*.jpg,*.png,*.jpeg}" }}

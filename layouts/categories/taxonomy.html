@@ -8,15 +8,14 @@
 		</div>
 
 		<div class="stack gap-2xl">
-			{{ partial "headline.html" . }}
+			<h2 class="h2 accented-fg-color text-centered">Category: {{ .Title }}</h2>
 			<div
 				class="stack gap-2xl justify-center"
 				itemscope=""
 				itemtype="https://schema.org/Blog"
 			>
-				{{ $pag := .Paginate (where .Site.RegularPages "Type" "in"
-				.Site.Params.mainSections) }} {{ range $pag.Pages.ByDate.Reverse }} {{
-				partial "main-article.html" . }} {{ end }}
+				{{ range .Paginator.Pages }} {{ partial "main-article.html" . }} {{ end
+				}}
 			</div>
 		</div>
 		{{ partial "pagination.html" .}}
