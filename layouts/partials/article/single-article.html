@@ -1,0 +1,50 @@
+<article class="stack gap-md">
+	{{ if not .Params.shouldHidePostTitleBox }}
+	<div class="stack post__title gap-lg center">
+		<div class="cluster gap-md center">
+			{{ partial "article/display-categories.html" . }}
+		</div>
+
+		<div class="title-section stack gap-xs">
+			<h2 class="h1 text-centered">{{ .Title }}</h2>
+			<h3 class="h3 muted-fg-color text-centered">{{ .Params.subtitle}}</h3>
+		</div>
+		<section class="cluster gap-md justify-center">
+			<span class="cluster muted-fg gap-sm">
+				{{ if .Params.author }}
+				<div class="frame circular--portrait picture-2xs">
+					<img
+						src="{{ .Site.BaseURL }}assets/pedro-photo.jpeg"
+						alt="{{ .Params.author }} photo"
+					/>
+				</div>
+				<span>{{ .Params.author }}</span></span
+			>
+			{{ end }} {{ if .PublishDate }}
+			<span class="muted-fg gap-sm">
+				<i class="fa-regular fa-calendar fa-lg"></i>
+				{{ $dateTime := .PublishDate.Format "2006-01-02" }} {{ $dateFormat :=
+				.Site.Params.dateFormat | default "January 2, 2006" }}
+				<time class="muted-fg" datetime="{{ $dateTime }}"
+					>{{ .PublishDate.Format $dateFormat }}</time
+				>
+			</span>
+			{{ end }}
+		</section>
+		{{ if not .Params.shouldHideReadTime }}
+		<span class="cluster muted-fg gap-sm justify-center">
+			<i class="fa-regular fa-clock"></i>
+			<span>{{ .ReadingTime }} Minutes read</span></span
+		>
+		{{ end }}
+	</div>
+	{{ end }} {{ with .Resources }} {{ with .GetMatch
+	"{cover.*,*.jpg,*.png,*.jpeg}" }} {{ $cover := .Resize "600x" }} {{ with
+	$cover }}
+	<div class="frame square fluid-picture">
+		<img src="{{ .Permalink }}" alt="title of the photo" />
+	</div>
+	{{ end }} {{ end }} {{ end }}
+
+	<div class="stack gap-md">{{ .Content }}</div>
+</article>

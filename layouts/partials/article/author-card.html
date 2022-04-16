@@ -1,0 +1,86 @@
+<section class="author-card stack gap-xl">
+	<div class="decoration fluid"></div>
+	<section class="cluster gap-2xl flex-nowrap">
+		<div class="frame circular--portrait">
+			<img src="{{ .Site.Params.blogPhoto }}" alt="{{ .Site.Title }} photo" />
+		</div>
+
+		<section class="header__author stack gap-md">
+			<h1 class="h2">{{ .Site.Title }}</h1>
+			<p class="p">{{ .Site.Params.description }}</p>
+		</section>
+	</section>
+
+	<div class="author-card__social">
+		<div class="author-card__social__decorated-buttons decoration fluid"></div>
+		<div class="author-card__social__buttons cluster gap-md">
+			{{ with .Site.Params.facebook }}
+			<a
+				data-hint="Facebook"
+				aria-label="Facebook"
+				href="{{ . }}"
+				rel="me"
+				class="button outlined button__round icon-size-md"
+				title="Personal Facebook community"
+			>
+				<i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+			</a>
+			{{ end }} {{ with .Site.Params.twitter }}
+			<a
+				data-hint="Twitter"
+				aria-label="Personal twitter"
+				href="{{ . }}"
+				rel="me"
+				class="button outlined button__round icon-size-md"
+				title="Personal twitter"
+			>
+				<i class="fa-brands fa-twitter"></i>
+			</a>
+
+			{{ end}} {{ with .Site.Params.instagram }}
+			<a
+				data-hint="Instagram"
+				aria-label="Personal instagram community"
+				href="{{ . }}"
+				rel="me"
+				class="button outlined button__round icon-size-md"
+				title="Personal instagram community"
+			>
+				<i class="fa-brands fa-instagram"></i>
+			</a>
+			{{ end }} {{ with .Site.Params.linkedin }}
+			<a
+				data-hint="Linkedin"
+				aria-label="Personal Linkedin community"
+				href="{{ . }}"
+				rel="me"
+				class="button outlined button__round icon-size-md"
+				title="Personal Linkedin community"
+			>
+				<i class="fa-brands fa-linkedin-in"></i>
+			</a>
+			{{ end}} {{ with .Site.Params.github }}
+			<a
+				data-hint="github"
+				aria-label="Personal github"
+				href="{{ . }}"
+				rel="me"
+				class="button outlined button__round icon-size-md"
+				title="Personal Github"
+			>
+				<i class="fa-brands fa-github-alt"></i>
+			</a>
+			{{ end}} {{ with .Site.Params.email }}
+			<a
+				data-hint="Email"
+				aria-label="Send an Email"
+				href="mailto:{{ . }}"
+				class="button outlined button__round icon-size-md"
+				title="Send an email"
+			>
+				<i class="fa-regular fa-envelope"></i>
+			</a>
+			{{ end }}
+		</div>
+	</div>
+</section>

@@ -1,14 +1,14 @@
 {{ define "main" }}
 
 <div class="main-sidebar with-sidebar container" id="top">
-	<div>{{ partial "main-header.html" . }}</div>
+	<div>{{ partial "page/main-header.html" . }}</div>
 	<main id="blog" class="main-section stack padding-2xl gap-2xl">
 		<div class="cluster gap-xl justify-center">
-			{{ partial "nav-items.html" .}}
+			{{ partial "page/nav-items.html" .}}
 		</div>
 
 		<div class="stack gap-2xl">
-			{{ partial "headline.html" . }}
+			{{ partial "page/headline.html" . }}
 			<div
 				class="stack gap-2xl justify-center"
 				itemscope=""
@@ -16,10 +16,10 @@
 			>
 				{{ $pag := .Paginate (where .Site.RegularPages "Type" "in"
 				.Site.Params.mainSections) }} {{ range $pag.Pages.ByDate.Reverse }} {{
-				partial "main-article.html" . }} {{ end }}
+				partial "article/article-summary-card.html" . }} {{ end }}
 			</div>
 		</div>
-		{{ partial "pagination.html" .}}
+		{{ partial "page/pagination.html" .}}
 	</main>
 </div>
 {{ end }}

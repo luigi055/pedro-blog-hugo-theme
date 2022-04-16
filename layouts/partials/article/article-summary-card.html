@@ -17,15 +17,7 @@
 		</div>
 
 		<div class="cluster gap-sm">
-			{{ $categories := .Params.categories }} {{range $index, $category :=
-			$categories }}
-
-			<a href="/categories/{{ . | urlize}}#blog" class="button button-link h4"
-				>{{ . }}</a
-			>
-
-			{{ if not (eq (add $index 1) (len $categories)) }} &#8226; {{ end }} {{
-			end }}
+			{{ partial "article/display-categories.html" . }}
 		</div>
 		<p class="p">{{ .Summary }}</p>
 		<a
