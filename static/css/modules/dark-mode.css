@@ -16,8 +16,8 @@
 	position: relative;
 	left: 0;
 	top: 0;
-	width: 24px;
-	height: 24px;
+	width: 1.5rem;
+	height: 1.5rem;
 	cursor: pointer;
 }
 
@@ -39,7 +39,7 @@
 	width: 70%;
 	height: 70%;
 	background: var(--accent-color);
-	border: 5px solid var(--dark-mode-switcher-border-color);
+	border: 0.3125rem solid var(--dark-mode-switcher-border-color);
 	transition: all ease 0.15s;
 }
 
@@ -62,7 +62,7 @@
 	background: var(--accent-color);
 	width: 12%;
 	height: 130%;
-	border-radius: 10px;
+	border-radius: 0.625rem;
 	transition: all ease 0.15s;
 }
 

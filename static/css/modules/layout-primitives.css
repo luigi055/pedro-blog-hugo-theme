@@ -65,32 +65,32 @@
 .frame.circular--landscape.picture-2xs,
 .frame.circular--portrait.picture-2xs,
 .frame.square.picture-2xs {
-	max-width: 25px;
+	max-width: 1.5625rem;
 }
 .frame.circular--landscape.xs-picture,
 .frame.circular--portrait.xs-picture,
 .frame.square.xs-picture {
-	max-width: 50px;
+	max-width: 3.125rem;
 }
 .frame.circular--landscape.sm-picture,
 .frame.circular--portrait,
 .frame.square.sm-picture {
-	max-width: 100px;
+	max-width: 6.25rem;
 }
 .frame.circular--landscape.md-picture,
 .frame.circular--portrait.md-picture,
 .frame.square.md-picture {
-	max-width: 200px;
+	max-width: 12.5rem;
 }
 .frame.circular--landscape.lg-picture,
 .frame.circular--portrait.lg-picture,
 .frame.square.lg-picture {
-	max-width: 400px;
+	max-width: 25rem;
 }
 .frame.circular--landscape.xl-picture,
 .frame.circular--portrait.xl-picture,
 .frame.square.xl-picture {
-	max-width: 800px;
+	max-width: 50rem;
 }
 .frame.circular--landscape.fluid-picture,
 .frame.circular--portrait.fluid-picture,

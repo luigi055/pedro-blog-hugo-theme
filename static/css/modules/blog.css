@@ -66,18 +66,18 @@ body {
 }
 
 .decoration {
-	height: 4px;
+	height: 0.25rem;
 	background: var(--accent-color);
 }
 
 .decoration.decoration-sm {
-	width: 40px;
+	width: 2.5rem;
 }
 .decoration.decoration-md {
-	width: 80px;
+	width: 5rem;
 }
 .decoration.decoration-lg {
-	width: 120px;
+	width: 7.5rem;
 }
 .decoration.fluid {
 	width: 100%;
@@ -100,7 +100,7 @@ body {
 }
 
 .button.button__rounded-square {
-	border-radius: 5px;
+	border-radius: 0.3125rem;
 }
 
 .button.button__round {
@@ -109,13 +109,13 @@ body {
 
 .button.outlined {
 	background-color: transparent;
-	border: 2px solid var(--foreground-color);
+	border: 0.125rem solid var(--foreground-color);
 	color: var(--foreground-color);
 }
 
 .button.outlined:hover {
 	background-color: transparent;
-	border: 2px solid var(--accent-color);
+	border: 0.125rem solid var(--accent-color);
 	color: var(--accent-color);
 }
 
@@ -152,7 +152,7 @@ body {
 }
 
 .main-section {
-	border-top: 1px solid var(--light-grey-color);
+	border-top: 0.0625rem solid var(--light-grey-color);
 }
 
 .footer {

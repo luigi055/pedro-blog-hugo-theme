@@ -5,24 +5,24 @@
 	color: var(--muted-grey-color);
 }
 .margin-bottom-decoration--accented {
-	border-bottom: 1px solid var(--accent-color);
+	border-bottom: 0.0625rem solid var(--accent-color);
 }
 .margin-bottom-decoration {
-	border-bottom: 1px solid var(--light-grey-color);
+	border-bottom: 0.0625rem solid var(--light-grey-color);
 }
 .margin-top-decoration {
-	border-top: 1px solid var(--light-grey-color);
+	border-top: 0.0625rem solid var(--light-grey-color);
 }
 
 .card {
-	border-radius: 5px;
+	border-radius: 0.3125rem;
 }
 
 .card.card-border {
-	border: 1px solid var(--muted-grey-color);
+	border: 0.0625rem solid var(--muted-grey-color);
 }
 .card.card-border:hover {
-	border: 1px solid var(--accent-color);
+	border: 0.0625rem solid var(--accent-color);
 }
 
 .flex-grow-max-relevance {

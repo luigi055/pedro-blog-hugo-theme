@@ -90,7 +90,6 @@
 		--size-lg: 1rem;
 		--size-xl: 1.5rem;
 		--size-2xl: 2rem;
-		--size-macro: 4rem;
 
 		--type-scale: 1.2;
 
@@ -114,6 +113,7 @@
 		--size-macro: 4rem;
 
 		--max-container-size: 90rem;
+		--max-container-size-post: 100rem;
 
 		--base-size: 1.5rem;
 		--type-scale: 1.15;
