@@ -3,8 +3,12 @@
 <script type="text/javascript">
 	(function () {
 		topbar.show();
-		window.addEventListener("DOMContentLoaded", () => {
+		window.addEventListener("load", () => {
 			topbar.hide();
+		});
+
+		window.addEventListener("beforeunload", () => {
+			topbar.show();
 		});
 	})();
 </script>
