@@ -1,0 +1,125 @@
+/* SCREEN SMALLER THAN 400px/16px (25rem) OR EQUIVALENT*/
+:root {
+	--accent-color: #f90; /* light mode #f90 / dark mode: #0bffbf*/
+	--foreground-color: #0b0c27; /* light mode #0b0c27 / dark mode #fefefe*/
+	--background: #fefefe; /* light mode: #fefefe / darkmode : #0b0c27*/
+	--light-grey-color: #ccc;
+	--muted-grey-color: #7e8c9a;
+	--font-family: "Lora", serif;
+	--max-container-size: 68.75rem;
+	--max-container-size-post: 60rem;
+
+	--size-none: 0;
+	--size-2xs: 0.125rem;
+	--size-xs: 0.25rem;
+	--size-sm: 0.5rem;
+	--size-md: 0.75rem;
+	--size-lg: 1rem;
+	--size-xl: 1.25rem;
+	--size-2xl: 1.5rem;
+	--size-macro: 2rem;
+
+	/*Responsive font auto scaling */
+	--base-size: 1rem;
+	--type-scale: 1.15;
+	--h3: calc(var(--base-size) * var(--type-scale));
+	--h2: calc(var(--h3) * var(--type-scale));
+	--h1: calc(var(--h2) * var(--type-scale));
+	--text-sm: calc(var(--base-size) / var(--type-scale));
+
+	/* SQUARED SIZES */
+	--square-sm: 1.4rem;
+	--square-md: 1.8rem;
+
+	--blog-card-max-width: 12rem;
+
+	--dark-mode-switcher-bg: var(--accent-color);
+	--dark-mode-switcher-border-color: var(--background);
+}
+
+/* SCREENS FROM 476px/16px (29.75rem) OR EQUIVALENT*/
+@media screen and (min-width: 29.75rem) {
+	:root {
+		--size-none: 0;
+		--size-2xs: 0.125rem;
+		--size-xs: 0.2rem;
+		--size-sm: 0.4rem;
+		--size-md: 0.7rem;
+		--size-lg: 0.8rem;
+		--size-xl: 1.2rem;
+		--size-2xl: 1.5rem;
+		--size-macro: 3.5rem;
+
+		--type-scale: 1.2;
+
+		/* SQUARED SIZES */
+		--square-sm: 1.5rem;
+		--square-md: 2rem;
+	}
+}
+
+/* SCREENS FROM 768px/16px (40rem) OR EQUIVALENT*/
+@media screen and (min-width: 48rem) {
+	:root {
+		--size-none: 0;
+		--size-2xs: 0.125rem;
+		--size-xs: 0.25rem;
+		--size-sm: 0.5rem;
+		--size-md: 0.75rem;
+		--size-lg: 1rem;
+		--size-xl: 1.5rem;
+		--size-2xl: 2rem;
+		--size-macro: 4rem;
+
+		--base-size: 1.1rem;
+
+		/* SQUARED SIZES */
+		--square-sm: 1.5rem;
+		--square-md: 2rem;
+	}
+}
+
+/* SCREENS FROM 1200px/16px (75rem) OR EQUIVALENT*/
+@media screen and (min-width: 75rem) {
+	:root {
+		--size-none: 0;
+		--size-2xs: 0.125rem;
+		--size-xs: 0.25rem;
+		--size-sm: 0.5rem;
+		--size-md: 0.75rem;
+		--size-lg: 1rem;
+		--size-xl: 1.5rem;
+		--size-2xl: 2rem;
+
+		--type-scale: 1.2;
+
+		/* SQUARED SIZES */
+		--square-sm: 1.7rem;
+		--square-md: 2.2rem;
+	}
+}
+
+/* SCREENS FROM 2000px/16px (125rem) OR EQUIVALENT*/
+@media screen and (min-width: 125rem) {
+	:root {
+		--size-none: 0;
+		--size-2xs: 0.125rem;
+		--size-xs: 0.25rem;
+		--size-sm: 0.5rem;
+		--size-md: 0.75rem;
+		--size-lg: 1rem;
+		--size-xl: 1.5rem;
+		--size-2xl: 2rem;
+		--size-macro: 4rem;
+
+		--max-container-size: 90rem;
+		--max-container-size-post: 100rem;
+
+		--base-size: 1.5rem;
+		--type-scale: 1.15;
+
+		/* SQUARED SIZES */
+		--square-sm: 1.8rem;
+		--square-md: 2.3rem;
+	}
+}
