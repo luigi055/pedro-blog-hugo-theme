@@ -19,8 +19,9 @@
 
 	const darkModeSwitcher = document.getElementById("darkModeSwitcher");
 
-	if (isDarkModeActivated()) {
-		darkModeSwitcher.checked = isDarkModeActivated();
+	const isDarkModeActive = isDarkModeActivated();
+	if (isDarkModeActive) {
+		darkModeSwitcher.checked = isDarkModeActive;
 		document.body.classList.add("dark-mode");
 	}
 

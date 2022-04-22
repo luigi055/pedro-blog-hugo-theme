@@ -2,6 +2,9 @@
 <html lang="en">
 	{{- partial "page/head.html" . -}}
 	<body class="stack">
+		<!-- Blocking the rest of the UI until the theme is correctly defined first-->
+		<!-- This is placed here in order to avoid flickering page initialization  -->
+		<script src="{{ .Site.BaseURL }}js/dark-mode.js"></script>
 		{{- block "main" . }}{{- end }} {{- partial "page/footer.html" . -}} {{-
 		partial "page/scripts.html" . -}}
 	</body>
