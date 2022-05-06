@@ -1,5 +1,6 @@
 /* SCREEN SMALLER THAN 400px/16px (25rem) OR EQUIVALENT*/
 :root {
+	--base-document-font-size: 16px;
 	--accent-color: #f90; /* light mode #f90 / dark mode: #0bffbf*/
 	--foreground-color: #0b0c27; /* light mode #0b0c27 / dark mode #fefefe*/
 	--background: #fefefe; /* light mode: #fefefe / darkmode : #0b0c27*/
@@ -71,7 +72,7 @@
 		--size-2xl: 2rem;
 		--size-macro: 4rem;
 
-		--base-size: 1.1rem;
+		--base-size: 1.125rem;
 
 		/* SQUARED SIZES */
 		--square-sm: 1.5rem;
@@ -91,8 +92,7 @@
 		--size-xl: 1.5rem;
 		--size-2xl: 2rem;
 
-		--type-scale: 1.2;
-
+		--type-scale: 1.25;
 		/* SQUARED SIZES */
 		--square-sm: 1.7rem;
 		--square-md: 2.2rem;

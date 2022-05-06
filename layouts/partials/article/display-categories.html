@@ -1,9 +1,0 @@
-{{ $categories := .Params.categories }} {{range $index, $category := $categories
-}}
-
-<a href="/categories/{{ lower $category }}" class="button button-link h4"
-	>{{ $category }}</a
->
-
-<!-- Add the separator when there are more than two categories -->
-{{ if not (eq (add $index 1) (len $categories)) }} &#8226; {{ end }} {{ end }}

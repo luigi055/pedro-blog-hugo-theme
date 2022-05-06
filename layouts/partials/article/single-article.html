@@ -2,7 +2,16 @@
 	{{ if not .Params.shouldHidePostTitleBox }}
 	<div class="stack post__title gap-lg center">
 		<div class="cluster gap-md center">
-			{{ partial "article/display-categories.html" . }}
+			{{ $categories := .Params.categories }} {{range $index, $category :=
+			$categories }}
+
+			<a href="/categories/{{ lower $category }}" class="button button-link h3"
+				>{{ $category }}</a
+			>
+
+			<!-- Add the separator when there are more than two categories -->
+			{{ if not (eq (add $index 1) (len $categories)) }} &#8226; {{ end }} {{
+			end }}
 		</div>
 
 		<div class="title-section stack gap-xs">
@@ -46,5 +55,5 @@
 	</div>
 	{{ end }} {{ end }} {{ end }}
 
-	<div class="stack gap-md">{{ .Content }}</div>
+	<div class="stack gap-2xl">{{ .Content }}</div>
 </article>
