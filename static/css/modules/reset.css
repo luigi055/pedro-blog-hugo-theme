@@ -73,3 +73,9 @@ select {
 		scroll-behavior: auto !important;
 	}
 }
+
+pre {
+	/* white-space: pre-wrap; */
+	/* word-wrap: break-word; */
+	overflow: auto;
+}
