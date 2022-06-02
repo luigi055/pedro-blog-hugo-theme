@@ -1,4 +1,5 @@
 .dark-mode {
+	--muted-accent-color: #035c45;
 	--accent-color: #0bffbf; /* light mode #f90 / dark mode: #0bffbf*/
 	--foreground-color: #fefefe; /* light mode #0b0c27 / dark mode #fefefe*/
 	--background: #0b0c27; /* light mode: #fefefe / darkmode : #0b0c27*/

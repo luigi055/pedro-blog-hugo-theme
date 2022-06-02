@@ -1,6 +1,7 @@
 /* SCREEN SMALLER THAN 400px/16px (25rem) OR EQUIVALENT*/
 :root {
 	--base-document-font-size: 16px;
+	--muted-accent-color: #ffc774;
 	--accent-color: #f90; /* light mode #f90 / dark mode: #0bffbf*/
 	--foreground-color: #0b0c27; /* light mode #0b0c27 / dark mode #fefefe*/
 	--background: #fefefe; /* light mode: #fefefe / darkmode : #0b0c27*/

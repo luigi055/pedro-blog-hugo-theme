@@ -1,5 +1,10 @@
+::selection {
+	color: var(--background);
+	background: var(--accent-color);
+}
+
 /* typography */
-.h1,
+h1,
 h2,
 h3,
 h4,
@@ -10,6 +15,16 @@ a {
 	font-stretch: normal;
 	font-style: normal;
 	letter-spacing: normal;
+}
+
+a {
+	color: var(--foreground-color);
+	text-decoration: underline;
+	text-underline-offset: 0.3125rem;
+}
+
+a:hover {
+	color: var(--accent-color);
 }
 
 h1,
@@ -84,4 +99,38 @@ h5,
 
 .text-undecorated {
 	text-decoration: none;
+}
+
+code {
+	font-family: monospace;
+	font-size: inherit;
+}
+
+p > code,
+li > code,
+dd > code,
+td > code {
+	background: var(--muted-accent-color);
+	word-wrap: break-word;
+	box-decoration-break: clone;
+	padding: 0.1rem 0.3rem 0.2rem;
+	border-radius: 0.2rem;
+}
+
+blockquote {
+	background: var(--muted-accent-color);
+	border-left: 10px solid var(--accent-color);
+	padding: 0.5rem 10px;
+	quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+	color: var(--accent-color);
+	content: open-quote;
+	font-size: 4rem;
+	line-height: 0.1em;
+	margin-right: 0.25em;
+	vertical-align: -0.4em;
+}
+blockquote p {
+	display: inline;
 }
